@@ -62,11 +62,7 @@ Your highest score is saved using **localStorage** so it stays even after refres
 
 ## 📁 Project Structure / ساختار پروژه
 
-/project
-│── index.html
-│── style.css
-│── script.js
-└── README.md
+
 
 <pre>
 
