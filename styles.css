@@ -1,0 +1,306 @@
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VazirFont';
+    src: url('./fonts/vazir/Vazirmatn-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+:root {
+    --primary: #4e54c8;
+    --secondary: #8f94fb;
+    --accent: #f9c846;
+    --bg: #1e1e2f;
+    --card-bg: #2e2e3f;
+    --input-bg: #3a3a4a;
+    --text-color: #f0f0f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VazirFont", sans-serif;
+    font-size: 18;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    font-family: "Vazir", sans-serif;
+    color: var(--text-color);
+    padding: 20px;
+}
+
+#game_board {
+    width: 100%;
+    max-width: 400px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#game_information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#game_name {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#game_start_button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#game_start_button:hover {
+    background: var(--secondary);
+}
+
+#numbers_range {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#numbers_range input {
+    width: 60px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+#game_report {
+    text-align: center;
+}
+
+#game_report_message {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#game_number_report_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background: var(--accent);
+}
+
+#number_box {
+    min-width: 60px;
+    padding: 5px 10px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#player_area {
+    display: flex;
+    gap: 10px;
+}
+
+#playing_area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#playing_area input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+    text-align: center;
+}
+
+#playing_area button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#playing_area button:hover {
+    background: var(--secondary);
+}
+
+#score_area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+#guide_report {
+    background: var(--input-bg);
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#current_score,
+#highest_score {
+    display: flex;
+    justify-content: space-between;
+    background: var(--input-bg);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#game_board>button#reset_button {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#game_board>button#reset_button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 360px) {
+    #game_board {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    #game_name {
+        font-size: 1.1rem;
+    }
+
+    #numbers_range input {
+        width: 50px;
+    }
+}
+
+#toast_container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+#toast_container .toast {
+    background: var(--accent);
+    color: black;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    min-width: 160px;
+    text-align: center;
+    opacity: 1;
+    font-size: 0.9rem;
+    animation: fadeOut 2.5s ease forwards;
+    pointer-events: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
