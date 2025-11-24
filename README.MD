@@ -76,3 +76,8 @@ Your highest score is saved using **localStorage** so it stays even after refres
 
 
  This **README.MD** file was created with AI.
+
+---
+
+یکی از تسک های https://quera.org/
+One of the tasks https://quera.org/
